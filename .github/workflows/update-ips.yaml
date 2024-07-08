@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Update IPs
-        run: python update-ips.py
+        run: python update.py
       # move all *.txt files to main branch
       - name: Commit Files
         run: |
