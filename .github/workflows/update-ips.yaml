@@ -30,7 +30,7 @@ jobs:
           git switch lists
           mv /tmp/ips/*.txt .
           rm requirements.txt
-          git add *.txt
+          git add .
           git commit -m "Update IPs"
           git push --set-upstream origin lists
 
