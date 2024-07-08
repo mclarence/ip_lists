@@ -24,9 +24,9 @@ jobs:
           git config --global user.email 'mail@c-mes.net'
           mkdir -p /tmp/ips
           mv *.txt /tmp/ips
-          git checkout -b lists
+          git checkout -b lists --orphan
           mv /tmp/ips/*.txt .
           git add *.txt
           git commit -m "Update IPs"
-          git push
+          git push --set-upstream origin lists
 
