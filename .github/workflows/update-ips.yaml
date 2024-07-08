@@ -24,7 +24,7 @@ jobs:
           git config --global user.email 'mail@c-mes.net'
           mkdir -p /tmp/ips
           mv *.txt /tmp/ips
-          git checkout lists
+          git switch lists
           mv /tmp/ips/*.txt .
           git add *.txt
           git commit -m "Update IPs"
