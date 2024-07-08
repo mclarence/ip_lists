@@ -2,7 +2,7 @@ name: Update IPs
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '*/30 * * * *'
   
 permissions:
   contents: write
@@ -29,6 +29,7 @@ jobs:
           git fetch --all
           git switch lists
           mv /tmp/ips/*.txt .
+          rm requirements.txt
           git add *.txt
           git commit -m "Update IPs"
           git push --set-upstream origin lists
